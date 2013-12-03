@@ -5,17 +5,15 @@
   <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
   <remote fetch="git://github.com/mozilla/" name="mozilla"/>
   <remote fetch="git://github.com/apitrace/" name="apitrace"/>
-  <remote fetch="git://codeaurora.org/" name="caf"/>
-  <remote fetch="https://git.mozilla.org/releases" name="mozillaorg"/>
 
   <!-- B2G specific things. -->
-  <project name="platform_build" path="build" remote="b2g" revision="b2g-4.3_r2.1">
+  <project name="platform_build" path="build" remote="b2g" revision="b2g-4.2.2_r1">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
-  <project name="gecko.git" path="gecko" remote="mozillaorg" revision="master" />
+  <project name="mozilla-central" path="gecko" remote="mozilla" revision="master"/>
   <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
   <project name="fake-libdvm" path="dalvik" remote="b2g" revision="master"/>
-  <project name="gaia" path="gaia" remote="mozillaorg" revision="master"/>
+  <project name="gaia" path="gaia" remote="b2g" revision="master"/>
   <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="master"/>
   <project name="moztt" path="external/moztt" remote="b2g" revision="master"/>
   <project name="apitrace" path="external/apitrace" remote="apitrace" revision="master" />
@@ -27,8 +25,8 @@
   <project groups="linux" name="platform/prebuilts/clang/linux-x86/3.2" path="prebuilts/clang/linux-x86/3.2"/>
   <project groups="linux" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6"/>
   <project groups="linux" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6"/>
-  <project groups="linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7"/>
-  <project groups="linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7"/>
+  <project groups="linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6"/>
+  <project groups="linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6"/>
   <project name="device/common" path="device/common"/>
   <project name="device/sample" path="device/sample"/>
   <project name="platform/abi/cpp" path="abi/cpp"/>
@@ -36,12 +34,11 @@
   <project name="platform/bootable/recovery" path="bootable/recovery"/>
   <project name="platform/external/aac" path="external/aac"/>
   <project name="platform/external/bluetooth/bluedroid" path="external/bluetooth/bluedroid"/>
-  <project name="platform/external/bison" path="external/bison"/>
   <project name="platform/external/bsdiff" path="external/bsdiff"/>
   <project name="platform/external/bzip2" path="external/bzip2"/>
-  <project name="platform/external/checkpolicy" path="external/checkpolicy"/>
   <project name="platform/external/clang" path="external/clang"/>
   <project name="platform/external/compiler-rt" path="external/compiler-rt"/>
+  <project name="platform/external/dbus" path="external/dbus"/>
   <project name="platform/external/dhcpcd" path="external/dhcpcd"/>
   <project name="platform/external/dnsmasq" path="external/dnsmasq"/>
   <project name="platform/external/dropbear" path="external/dropbear"/>
@@ -56,8 +53,7 @@
   <project name="platform/external/giflib" path="external/giflib"/>
   <project name="platform/external/gtest" path="external/gtest"/>
   <project name="platform/external/harfbuzz" path="external/harfbuzz"/>
-  <project name="platform/external/harfbuzz_ng" path="external/harfbuzz_ng"/>
-  <project name="platform/external/icu4c" path="external/icu4c" revision="a8f744cec5125866672e131f328cc5a6e35c9173"/>
+  <project name="platform/external/icu4c" path="external/icu4c"/>
   <project name="platform/external/iproute2" path="external/iproute2"/>
   <project name="platform/external/ipsec-tools" path="external/ipsec-tools"/>
   <project name="platform/external/iptables" path="external/iptables"/>
@@ -71,8 +67,6 @@
   <project name="platform/external/libnl-headers" path="external/libnl-headers"/>
   <project name="platform/external/libogg" path="external/libogg"/>
   <project name="platform/external/libpng" path="external/libpng"/>
-  <project name="platform/external/libselinux" path="external/libselinux"/>
-  <project name="platform/external/libsepol" path="external/libsepol"/>
   <project name="platform/external/libvpx" path="external/libvpx"/>
   <project name="platform/external/llvm" path="external/llvm"/>
   <project name="platform/external/mdnsresponder" path="external/mdnsresponder"/>
@@ -84,14 +78,12 @@
   <project name="platform/external/ping6" path="external/ping6"/>
   <project name="platform/external/protobuf" path="external/protobuf"/>
   <project name="platform/external/safe-iop" path="external/safe-iop"/>
-  <project name="platform/external/sepolicy" path="external/sepolicy"/>
   <project name="platform/external/skia" path="external/skia"/>
   <project name="platform/external/sonivox" path="external/sonivox"/>
   <project name="platform/external/speex" path="external/speex"/>
   <project name="platform/external/sqlite" path="external/sqlite"/>
   <project name="platform/external/stlport" path="external/stlport"/>
   <project name="platform/external/strace" path="external/strace"/>
-  <project name="platform/external/svox" path="external/svox"/>
   <project name="platform/external/tagsoup" path="external/tagsoup"/>
   <project name="platform/external/tinyalsa" path="external/tinyalsa"/>
   <project name="platform/external/tinyxml" path="external/tinyxml"/>
@@ -117,7 +109,7 @@
   <project name="platform/prebuilts/sdk" path="prebuilts/sdk"/>
   <project name="platform/prebuilts/tools" path="prebuilts/tools"/>
   <project name="platform/system/bluetooth" path="system/bluetooth"/>
-  <project name="platform_system_core" path="system/core" remote="b2g" revision="b2g-4.3_r2.1"/>
+  <project name="platform_system_core" path="system/core" remote="b2g" revision="b2g-4.2.2_r1"/>
   <project name="platform/system/extras" path="system/extras"/>
   <project name="platform/system/media" path="system/media"/>
   <project name="platform/system/netd" path="system/netd"/>
