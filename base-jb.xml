@@ -11,11 +11,11 @@
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
   <project name="mozilla-central" path="gecko" remote="mozilla" revision="master"/>
-  <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
-  <project name="fake-libdvm" path="dalvik" remote="b2g" revision="master"/>
-  <project name="gaia" path="gaia" remote="b2g" revision="master"/>
-  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="master"/>
-  <project name="moztt" path="external/moztt" remote="b2g" revision="master"/>
+  <project name="rilproxy" path="rilproxy" remote="b2g" revision="v1.2"/>
+  <project name="fake-libdvm" path="dalvik" remote="b2g" revision="v1.2"/>
+  <project name="gaia" path="gaia" remote="b2g" revision="v1.2"/>
+  <project name="gonk-misc" path="gonk-misc" remote="b2g" revision="v1.2"/>
+  <project name="moztt" path="external/moztt" remote="b2g" revision="v1.2"/>
   <project name="apitrace" path="external/apitrace" remote="apitrace" revision="master" />
 
   <!-- Stock Android things -->
